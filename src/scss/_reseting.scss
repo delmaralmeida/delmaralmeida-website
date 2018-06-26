@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@import "_mixins";
+/*
+
+	TAGS
+
+*/
+html,
+body {
+ 	min-height: 100vh;
+ 	font-family: raleway, sans-serif;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6,
+p, label {
+	margin: 0;
+}
+/*
+
+	ADMIN BAR FIXES
+
+*/
+.admin-bar {
+
+	.fixed {
+		top: 60px;
+
+		@media screen and ( max-width: 991.99px ) {
+			top: 60px;
+		}
+
+		@media screen and ( max-width: 782px ) {
+			top: 60px;
+		}
+	}
+}
+
+@media screen and (max-width: 782px) {
+	#wpadminbar {
+		position: fixed;
+	}
+}

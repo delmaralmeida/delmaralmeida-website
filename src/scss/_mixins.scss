@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* fixed breakpoin */
+
+@mixin xs-only {
+  @media (max-width: 575.99px) { @content; }
+}
+@mixin sm-only {
+  @media (min-width: 576px) and (max-width: 767.99px) { @content; }
+}
+@mixin md-only {
+  @media (min-width: 768px) and (max-width: 991.99px) { @content; }
+}
+@mixin lg-only {
+  @media (min-width: 992px) and (max-width: 1199.99px) { @content; }
+}
+@mixin xl-only {
+  @media (min-width: 1200px) { @content; }
+}
+
+/* below breakpoint */
+
+@mixin sm-max {
+  @media (max-width: 767.99px) { @content; }
+}
+@mixin md-max {
+  @media (max-width: 991.99px) { @content; }
+}
+@mixin lg-max {
+  @media (max-width: 1199.99px) { @content; }
+}
+
+/* above breakpoint */
+
+@mixin sm {
+  @media (min-width: 576px) { @content; }
+}
+@mixin md {
+  @media (min-width: 768px) { @content; }
+}
+@mixin lg {
+  @media (min-width: 992px) { @content; }
+}
+@mixin xl {
+  @media (min-width: 1200px) { @content; }
+}
+
+/* placeholder */
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "wp_start_gulp",
+  "version": "1.0.0",
+  "description": "starting wordpress template with gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Delmar Almeida <delmar.webdev@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "browser-sync": "^2.18.12",
+    "css-mqpacker": "^6.0.1",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.1.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "node-normalize-scss": "^3.0.0",
+    "postcss-assets": "^4.2.0"
+  }
+}
