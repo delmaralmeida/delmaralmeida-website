@@ -17,7 +17,7 @@ $profile_pic = get_field( 'profile_pic', 'options' ); ?>
 				<img src="<?php echo $profile_pic['sizes']['large']; ?>">
 			</div>
 		
-			<ul class="nav">
+			<ul class="nav pb-5">
 			<?php
 
 			if ( have_rows( 'social_network', 'options' ) ) :

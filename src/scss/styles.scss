@@ -606,6 +606,13 @@ footer {
 			li {
 				border-bottom: none;
 
+				&.current-lang {
+					>a {
+						border-color: $color;
+						background-color: $grey;
+					}
+				}
+
 				>a.nav-link {
 					display: block;
 					margin-top: 2px;
@@ -643,8 +650,7 @@ footer {
 					color: $color;
 				}
 
-				&.active,
-				&.is_active {
+				&.active {
 					border-color: $color;
 					background-color: $grey;
 				}

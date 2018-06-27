@@ -2,15 +2,12 @@
 
 <?php
 # set footer fields
-$user_name = get_field( 'user_name', 'options' );
-$work_area = get_field( 'work_area', 'options' );
-
-?>
+$site_name = get_bloginfo( 'name' ); ?>
 
 <footer>
 	<div class="container">
-		<p><?php echo $user_name; ?></p>
-		<p><?php echo $work_area; ?></p>
+		<p><?php echo $site_name; ?></p>
+		<p>web developer</p>
 		<p>&copy; <?php echo date( 'Y' ); ?></p>
 	</div>
 </footer>

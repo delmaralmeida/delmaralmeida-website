@@ -54,15 +54,15 @@ get_template_part( 'components/header/navbar' ); ?>
 	</div>
 </div>
 
-<section id="testimonials" class="testimonials">
-	<?php get_template_part( 'components/section/testimonials' ); ?>
-</section>
-
-<div class="separator">
+<!-- <section id="testimonials" class="testimonials">
+ -->	<?php //get_template_part( 'components/section/testimonials' ); ?>
+<!-- </section>
+ -->
+<!-- <div class="separator">
 	<div class="container">
 		<div></div>
 	</div>
-</div>
+</div> -->
 
 <section id="contact" class="contact">
 	<?php get_template_part( 'components/section/contact' ); ?>
