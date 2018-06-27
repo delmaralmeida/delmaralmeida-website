@@ -1,20 +1,30 @@
 (	function( $ ) {
 /*
+
   TOGGLE NAVIGATION MENU
+
 */
 function nav_menu() {
   var
     $toggler = $( '.navbar-toggler' ),
-    $nav = $( '.header-menu' )
+    $li      = $( '.li-toggler' ),
+    $nav     = $( '.header-menu' )
   ;
 
   $toggler.on( 'click', function() {
+    console.log( 'toggler' );
     $nav.toggleClass( 'open' );
+  });
+
+  $( document ).mouseup( function( e ) {
+    $nav.removeClass( 'open' );
   });
 }
 nav_menu();
 /*
+
   SCROLL TO
+
 */
 function scrollTo(){
   $( 'a' ).on( 'click', function( e ) {
@@ -36,9 +46,10 @@ function scrollTo(){
   })
 };
 scrollTo();
-
 /*
+
   SKILL ITEMS HIGHLIGHT
+
 */
 function skill_items() {
   $item = $( '.grid-item' );
@@ -53,7 +64,9 @@ function skill_items() {
 }
 skill_items();
 /*
+
   MASONRY LAYOUT
+
 */
 function add_masonry() {
 	$( '.grid-skill' ).masonry({
@@ -63,9 +76,10 @@ function add_masonry() {
 }
 add_masonry();
 /*
-  SCROLL SPY
-*/
 
+  SCROLL SPY
+
+*/
 function add_scrollspy() {
   $( 'body' ).scrollspy({
     target: '#header_nav',
@@ -74,7 +88,9 @@ function add_scrollspy() {
 }
 add_scrollspy();
 /*
+
   SWIPER
+
 */
 function testimonials_slider() {
   var
