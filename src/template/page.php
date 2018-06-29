@@ -2,6 +2,10 @@
 
 <?php get_header(); ?>
 
+<?php
+# header navbar
+get_template_part( 'components/header/navbar' ); ?>
+
 <section>
 	<div class="container">
 
@@ -15,7 +19,7 @@
 
 		<div class="row">
 			<div class="page-content col-12 col-md-8">
-				<?php echo get_the_content(); ?>
+				<?php echo get_the_content(); # change this into the_content() to apply tags correctly ?>
 			</div>
 		</div>
 

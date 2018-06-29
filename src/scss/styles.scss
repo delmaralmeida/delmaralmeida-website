@@ -22,14 +22,41 @@ body {
 	border-top: 2px solid $color;
 	background-color: rgba( white, .9 );
 
+	>.container {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+
+		@include sm {
+			flex-direction: row;
+		}
+	}
+
 	@include sm-max {
 		top: 0;
 		bottom: auto!important;
 	}
 }
 .cc-message {
+	font-size: 12px;
 	font-weight: 400;
 	color: darken( $grey, 60% );
+
+	@include lg {
+		flex: none!important;
+	}
+}
+.cc-compliance {
+	min-width: 140px;
+
+	>a {
+
+	}
+
+	@include md {
+		padding-left: 10px;
+	}
 }
 .cc-link {
 	padding: 0;
@@ -43,6 +70,7 @@ body {
 		font-size: inherit;
 		letter-spacing: 0!important;
 		text-transform: inherit;
+		text-decoration: underline;
 		color: $color!important;
 		background-color: transparent;
 		border: none!important;
@@ -51,6 +79,9 @@ body {
 	}
 }
 .cc-dismiss {
+	padding: 0;
+	border-width: 1px;
+	font-size: 12px;
 	color: darken( $grey, 40% )!important;
 	background-color: white;
 
@@ -115,13 +146,20 @@ section {
 	background-color: rgba( 0, 0, 0, .4 );
 
 	.container {
+		@include md {
+			margin-top: 57px;
+		}
+
 		h1 {
 			display: inline-block;
+			font-size: 9vw;
 			font-weight: 900;
+			line-height: 1;
 			border-bottom: 1px solid;
 		}
 
 		h2 {
+			font-size: 5vw;
 			font-weight: 900;
 		}
 
@@ -129,6 +167,15 @@ section {
 			font-weight: 100;
 			letter-spacing: 1px;
 			color: $grey;
+		}
+
+		@include sm {
+			h1 {
+				font-size: 2.5rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+			}
 		}
 
 		.heart {
@@ -419,7 +466,7 @@ section {
 	position: relative;
 }
 footer {
-	padding: .5rem 0;
+	padding: 1rem 0;
 	font-weight: 900;
 	text-align: center;
 	letter-spacing: 1px;
@@ -429,12 +476,6 @@ footer {
 
 	p:first-child {
 		display: inline-block;
-		border-bottom: 1px solid darken( $color, 7% );
-	}
-
-	p:last-child {
-		font-weight: 400;
-		color: darken( $grey, 40% );
 	}
 }
 /*
@@ -479,10 +520,8 @@ footer {
 	.info {
 		max-width: 480px;
     margin: auto;
-    font-size: 0.9rem;
 
 		a {
-			font-size: 20px;
 			color: $color;
 
 			&:hover {
@@ -501,7 +540,7 @@ footer {
 	}
 
 	.md-form {
-		margin: 1.5rem 50px;
+		margin: 1rem 50px;
 	}
 }
 
@@ -534,7 +573,7 @@ footer {
 	}
 
 	.navbar-toggler {
-		padding: 1rem;
+		padding: 0;
 		width: auto;
 		align-self: flex-end;
 		color: $color;
@@ -549,6 +588,8 @@ footer {
 
 		.menu-open-btn,
 		.menu-close-btn {
+			display: block;
+			padding: 1rem;
 			transition: opacity .55s ease-in-out;
 		}
 

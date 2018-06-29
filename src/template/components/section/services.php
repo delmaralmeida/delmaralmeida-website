@@ -30,7 +30,7 @@
 			<div class="col-12 col-md-4 text-center">
 				<span class="fa-stack fa-4x">
 					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-heart-o fa-stack-1x fa-inverse"></i>
+					<i class="fa fa-bar-chart fa-stack-1x fa-inverse"></i>
 				</span>
 				<h4><?php echo pll__( 'serviço três' ); ?></h4>
 				<p class="text-justify"><?php echo pll__( 'descrição três' ); ?></p>

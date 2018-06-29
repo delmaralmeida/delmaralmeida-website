@@ -24,15 +24,16 @@ function cookiebar() {
     type: 'info',
 
     elements: {
-      header: '<span class="cc-header">{{header}}</span>&nbsp;',
+      header: '<span class="cc-header container">{{header}}</span>&nbsp;',
       message: '<span id="cookieconsent:desc" class="cc-message">{{message}}</span>',
       messagelink: '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank"><span class="btn btn-null waves-effect">{{link}}</span></a></span>',
-      dismiss: '<a aria-label="dismiss cookie message" tabindex="0" class="btn waves-effect cc-btn cc-dismiss">{{dismiss}}</a>',
+      dismiss: '<a aria-label="dismiss cookie message" tabindex="0" class="waves-effect cc-btn cc-dismiss">{{dismiss}}</a>',
       allow: '<a aria-label="allow cookies" tabindex="0" class="cc-btn cc-allow">{{allow}}</a>',
       deny: '<a aria-label="deny cookies" tabindex="0" class="cc-btn cc-deny">{{deny}}</a>',
       link: '<a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a>',
       close: '<span aria-label="dismiss cookie message" tabindex="0" class="cc-close">{{close}}</span>',
     },
+    window: '<div role="dialog" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window {{classes}}""><div class="container">{{children}}</div></div>',
 
     content: {
       <?php

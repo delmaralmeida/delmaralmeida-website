@@ -6,14 +6,13 @@
 */
 function nav_menu() {
   var
-    $toggler = $( '.navbar-toggler' ),
+    $toggler = $( '.navbar-toggler .menu-open-btn' ),
     $li      = $( '.li-toggler' ),
     $nav     = $( '.header-menu' )
   ;
 
   $toggler.on( 'click', function() {
-    console.log( 'toggler' );
-    $nav.toggleClass( 'open' );
+    $nav.addClass( 'open' );
   });
 
   $( document ).mouseup( function( e ) {
@@ -36,7 +35,7 @@ function scrollTo(){
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $( 'html, body' ).animate({
-        scrollTop: $( hash ).offset().top
+        scrollTop: $( hash ).offset().top - 20
       }, 800, function(){
  
        // Add hash (#) to URL when done scrolling (default click behavior)

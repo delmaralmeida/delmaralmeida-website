@@ -154,7 +154,11 @@ function polylang_string_list() {
     pll_register_string( 'mensagem de cookies', 'mensagem de cookies', 'cookiebar' );
     pll_register_string( 'botão de cookies', 'botão de cookies', 'cookiebar' );
 
+    # metadata
+    pll_register_string( 'subtítulo', 'subtítulo', 'meta-data' );
+
     # hero
+    pll_register_string( 'área de trabalho', 'área de trabalho', 'header' );
     pll_register_string( 'cta header-1', 'cta header-1', 'header' );
     pll_register_string( 'cta header-2', 'cta header-2', 'header' );
 
@@ -187,6 +191,9 @@ function polylang_string_list() {
     pll_register_string( 'mensagem de contacto', 'mensagem de contacto', 'contacto' );
     pll_register_string( 'mensagem de aviso', 'mensagem de aviso', 'contacto' );
     pll_register_string( 'mensagem de agradecimento', 'mensagem de agradecimento', 'contacto' );
+
+    # pages
+    pll_register_string( 'voltar', 'voltar', 'páginas' );
 
   }
 

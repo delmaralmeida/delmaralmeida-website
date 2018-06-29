@@ -14,9 +14,9 @@ $hero_shot 				= get_field( 'hero_shot', 'options' ); ?>
 <div class="container text-center d-flex flex-column justify-content-around">
 	<div>
 		<h1><?php echo $site_name; ?></h1>
-		<h2>web developer</h2>
+		<h2><?php echo pll__( 'área de trabalho' ); ?></h2>
 
-		<p class="pt-3"><?php echo $site_description; ?> <span class="heart">&hearts;</span></p>
+		<p class="pt-4"><?php echo $site_description; ?> <span class="heart">&hearts;</span></p>
 	</div>
 
 	<div>

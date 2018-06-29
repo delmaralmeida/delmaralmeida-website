@@ -1,9 +1,6 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
 <?php
-$lang 	   = get_locale();
-$lang_list = pll_the_languages( array('raw' => 1 ) );
-
 function make_nav( $slug ){
 	$array = array(
 		'theme_location' => $slug,
@@ -27,10 +24,20 @@ $language_menu = wp_nav_menu( make_nav( 'language-menu' ) );
 			<?php echo $language_menu; ?>
 		</div>
 
-		<?php	echo $header_menu; ?>
+		<?php
+		if ( is_home() ) :
+			echo $header_menu;
+
+		else : ?>
+		<li class="nav-item">
+			<a class="waves-effect nav-link" href="<?php echo pll_home_url() ?>">
+				<i class="fa fa-chevron-left fa-fh pr-2"></i><?php echo pll__( 'voltar' ); ?></a></li>
+
+		<?php
+		endif; ?>
 
 		<li class="li-toggler grow-1">
-			<button class="navbar-toggler z-depth-2 text-left" type="button" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler waves-effect z-depth-2 text-left" type="button" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="menu-open-btn">
 					<i class="fa fa-bars fa-1x"></i>
 				</span>
