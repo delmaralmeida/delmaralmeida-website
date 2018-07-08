@@ -11,10 +11,6 @@
 		<p><?php echo pll__( 'mensagem de skills' ); ?></p>
 	</div>
 
-	<div class="text-center pb-4">
-		<p class="h6"><?php echo pll__( 'disponibilidade' ); ?></p>
-	</div>
-
 	<div class="grid-skill grow-1">
 	<?php
 	if ( have_rows( 'skills', 'options' ) ) :
