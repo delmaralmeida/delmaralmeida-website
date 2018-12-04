@@ -1,7 +1,7 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
 <?php
-$site_name 				= get_bloginfo( 'name' );
+$site_name        = get_bloginfo( 'name' );
 $page_description = get_bloginfo( 'description' ) . ' &hearts;';
 $page_img         = get_template_directory_uri().'/screenshot.png';
 $page_url         = pll_home_url();

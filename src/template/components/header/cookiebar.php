@@ -17,7 +17,7 @@ if ( $page ) {
 # cookiebar script
 ?>
 <script type="text/javascript">
-	
+  
 function cookiebar() {
   window.addEventListener( 'load', function() {
   window.cookieconsent.initialise({

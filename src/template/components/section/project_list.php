@@ -5,42 +5,48 @@
 $projects = get_field( 'projects', 'options' ); ?>
 
 <div class="project-slider swiper-container">
-	<div class="swiper-wrapper">
+  <div class="swiper-wrapper">
 
-	<?php
-	if ( $projects ) :
-		foreach ( $projects as $project ) :
-			$title = $project['title'];
-			$img 	 = $project['sizes']['large'];
-			$url 	 = $project['alt']; ?>
+  <?php
+  if ( $projects ) :
+    foreach ( $projects as $project ) :
+      $title       = $project['title'];
+      $img         = $project['sizes']['large'];
+      $url         = $project['alt'];
+      $description = $project['description']; ?>
 
-		<div class="swiper-slide">
-			<h4><?php echo $title; ?></h4>
+    <div class="swiper-slide">
+      <h4><?php echo $title; ?></h4>
 
-			<?php ( !empty( $url ) ? $href = ' href="' . esc_url( $url ) . '"' : $href = '' ); ?>
+      <?php ( !empty( $url ) ? $href = ' href="' . esc_url( $url ) . '"' : $href = '' ); ?>
 
-			<a class="card card-image btn"<?php echo $href; ?> target="_BLANK" style="background-image: url('<?php echo $img; ?>');">
-				<div class="text-white text-center d-flex rgba-white-slight">
-					<div class="card-text"></div>
+      <a class="card card-image btn"<?php echo $href; ?> target="_BLANK" style="background-image: url('<?php echo $img; ?>');">
+        <div class="text-white text-center d-flex rgba-white-slight">
+          <div class="card-text"></div>
 
-					<?php if ( !empty( $url ) ) : ?>
-					<div>
-						<div class="border-red">
-							<i class="fa fa-clone left"></i>
-							<?php echo pll__( 'ver projecto' ); ?>
-						</div>
-					</div>
-					<?php endif; ?>
+          <?php if ( !empty( $url ) ) : ?>
+          <div>
 
-				</div>
-			</a>
-		</div>
-	            
-		<?php
-		endforeach;
-	endif; ?>
+            <?php if ( !empty( $description ) ) : ?>
+              <p style="text-decoration: none;" class="text-white text-lowercase font-weight-normal mb-2"><?php echo $description; ?></p>
+            <?php endif; ?>
 
-	</div>
+            <div class="border-red">
+              <i class="fa fa-clone left"></i>
+              <?php echo pll__( 'ver projecto' ); ?>
+            </div>
+          </div>
+          <?php endif; ?>
+
+        </div>
+      </a>
+    </div>
+              
+    <?php
+    endforeach;
+  endif; ?>
+
+  </div>
 
 
 </div>
@@ -48,9 +54,9 @@ $projects = get_field( 'projects', 'options' ); ?>
 <div class="project-pagination swiper-pagination"></div>
 
 <div class="swiper-btn button-next">
-	<i class="fa fa-angle-right fa-3x"></i>
+  <i class="fa fa-angle-right fa-3x"></i>
 </div>
 
 <div class="swiper-btn button-prev">
-	<i class="fa fa-angle-left fa-3x"></i>
+  <i class="fa fa-angle-left fa-3x"></i>
 </div>
